@@ -28,7 +28,7 @@ public class AddToCartPageTest extends BaseClass {
 		indexPage =new IndexPage();
 		searchResultPage = indexPage.searchProduct("mobile");
 	    addToCartPage    = searchResultPage.clickOnProduct();
-	    addToCartPage.enterQuantity("2");
+	   // addToCartPage.enterQuantity("2");
 	    addToCartPage.clickOnAddToCart();
 	   boolean result  = addToCartPage.validiateAddToCart();
 	    Assert.assertTrue(result);
