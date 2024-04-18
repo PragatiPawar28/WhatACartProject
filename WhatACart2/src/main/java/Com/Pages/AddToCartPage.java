@@ -36,8 +36,8 @@ public class AddToCartPage extends BaseClass {
 		PageFactory.initElements(getDriver(), this);
 	}
 	
-	public void enterQuantity(String quantity1)  {
-		Action.click(getDriver(), product);
+	public void enterQuantity(String quantity1) throws Throwable  {
+		Action.JSClick(getDriver(), product);
 		Action.type(quantity, quantity1);
 	}
 	

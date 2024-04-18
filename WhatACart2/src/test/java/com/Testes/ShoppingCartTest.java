@@ -28,7 +28,7 @@ public class ShoppingCartTest extends BaseClass {
 	}
 	
 	@Test(groups = "Regression",dataProvider = "getProduct",dataProviderClass = DataProviders.class)
-		public void verifyProductPrice(String ProductName, String qty) throws Exception {
+		public void verifyProductPrice(String ProductName, String qty) throws Throwable {
 		Log.startTestCase("verifyProductPrice");
 		indexPage =new IndexPage();
 		searchResultPage = indexPage.searchProduct(ProductName);

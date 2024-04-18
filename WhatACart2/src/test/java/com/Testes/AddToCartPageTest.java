@@ -23,12 +23,12 @@ public class AddToCartPageTest extends BaseClass {
 	}
 	
 	@Test(groups ={"Regression","Sanity"} )
-	public void verifyAddToCartProd() {
+	public void verifyAddToCartProd() throws Throwable {
 		Log.startTestCase("verifyAddToCartProd");
 		indexPage =new IndexPage();
 		searchResultPage = indexPage.searchProduct("mobile");
 	    addToCartPage    = searchResultPage.clickOnProduct();
-	   // addToCartPage.enterQuantity("2");
+	    addToCartPage.enterQuantity("2");
 	    addToCartPage.clickOnAddToCart();
 	   boolean result  = addToCartPage.validiateAddToCart();
 	    Assert.assertTrue(result);

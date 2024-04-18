@@ -31,8 +31,8 @@ public class LoginPageTest extends BaseClass{
 		indexPage  =new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
 		Log.info("Enter sucsessfully valid credentials");
-		//homePage=loginPage.login(propertyUtils.prop.getProperty("Username"), propertyUtils.prop.getProperty("password"));
-		homePage=loginPage.login(uname,passwd);
+		homePage=loginPage.login(propertyUtils.prop.getProperty("Username"), propertyUtils.prop.getProperty("password"));
+		//homePage=loginPage.login(uname,passwd);
 		String actualUrl=homePage.getCurrURL(); 
 		String expectedUrl ="https://ingecnotechnologies.com/other/Wcart/";
 		Assert.assertEquals(actualUrl, expectedUrl);

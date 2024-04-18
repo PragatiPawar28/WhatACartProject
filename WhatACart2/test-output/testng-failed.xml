@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="Com.jbk.listener.ListenerClass"/>
-  </listeners>
-  <test thread-count="5" name="TestAll(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testes.CompliteOrderPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="endToEndTest" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- com.Testes.CompliteOrderPageTest -->
-      <class name="com.Testes.ShoppingCartTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="tearDown"/>
-          <include name="verifyProductPrice" invocation-numbers="0"/>
-          <include name="beforeSuite"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.Testes.ShoppingCartTest -->
-      <class name="com.Testes.MyAccountPage">
-        <methods>
-          <include name="setup"/>
-          <include name="verifywishList"/>
-          <include name="afterSuite"/>
-          <include name="tearDown"/>
-          <include name="verifyEditProfileTest"/>
-          <include name="verifyOrderHistroy"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- com.Testes.MyAccountPage -->
       <class name="com.Testes.LoginPageTest">
         <methods>
           <include name="tearDown"/>
@@ -45,5 +13,5 @@
         </methods>
       </class> <!-- com.Testes.LoginPageTest -->
     </classes>
-  </test> <!-- TestAll(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
