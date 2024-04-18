@@ -50,6 +50,7 @@ public class CompliteOrderPageTest extends BaseClass {
 		loginPage=shoppingCart.clickOnCheckOut();
 		//cheackOutPage=loginPage.login1(propertyUtils.prop.getProperty("Username"), propertyUtils.prop.getProperty("password"));
 		cheackOutPage=loginPage.login1(uname,passwd);
+		cheackOutPage.viewCartCheckout();
 		cheackOutPage.PaymentMethod();
 		orderConfirmationPage=cheackOutPage.continue_page();
 		compliteOrderPage =orderConfirmationPage.orderconformation();

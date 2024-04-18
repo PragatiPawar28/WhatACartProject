@@ -34,7 +34,7 @@ public class LoginPageTest extends BaseClass{
 		homePage=loginPage.login(propertyUtils.prop.getProperty("Username"), propertyUtils.prop.getProperty("password"));
 		//homePage=loginPage.login(uname,passwd);
 		String actualUrl=homePage.getCurrURL(); 
-		String expectedUrl ="https://ingecnotechnologies.com/other/Wcart/";
+		String expectedUrl ="https://ingecnotechnologies.com/other/Wcart/customer/site/login";
 		Assert.assertEquals(actualUrl, expectedUrl);
 		Log.info("Login sucsessfully with valid credentials");
 		Log.endTestCase("verifyLoginTest");

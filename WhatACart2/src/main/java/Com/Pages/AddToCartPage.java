@@ -17,7 +17,7 @@ public class AddToCartPage extends BaseClass {
 	@FindBy(xpath="//*[@id=\"search-results-list-view\"]/div[1]/div/div/div/div[1]/a/img") 
 	WebElement product;
 	
-	@FindBy (id="quantity")
+	@FindBy (xpath="//*[@id=\"product_quantity\"]")
 	WebElement quantity;
 	
 	@FindBy(id="button-cart")
@@ -37,8 +37,11 @@ public class AddToCartPage extends BaseClass {
 	}
 	
 	public void enterQuantity(String quantity1) throws Throwable  {
-		Action.JSClick(getDriver(), product);
-		Action.type(quantity, quantity1);
+				Action.JSClick(getDriver(), product);
+				Action.fluentWait(getDriver(), viewCart, 5);
+				quantity.click();
+				quantity.clear();
+		        Action.type(quantity, quantity1);
 	}
 	
 	public void clickOnAddToCart()  {
@@ -50,7 +53,7 @@ public class AddToCartPage extends BaseClass {
 	
 	
 	public ShoppingCart clickOnVieCart() throws Exception {
-		Action.fluentWait(getDriver(), viewCart, 30);
+		Action.fluentWait(getDriver(), viewCart, 10);
 		Action.click(getDriver(), addTocartdropdown);
 		Action.click(getDriver(), viewCart);
 		return new ShoppingCart();

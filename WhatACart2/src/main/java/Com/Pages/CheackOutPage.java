@@ -28,14 +28,28 @@ public class CheackOutPage extends BaseClass {
 	@FindBy(id="save")
 	WebElement Continue1;
 	
+	@FindBy (xpath="//*[@id=\"cart\"]/div/a/span[2]")
+	WebElement addTocartdropdown;
+	
+	@FindBy (xpath="//*[@id=\"cart\"]/div/ul/li[3]/div/p/a[2]")
+	WebElement viewCartCheckOutbutton;
+	
+	
 	public CheackOutPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
 	
+	public void  viewCartCheckout () {
+		Action.click(getDriver(), addTocartdropdown);
+		Action.fluentWait(getDriver(), viewCartCheckOutbutton, 10);
+
+		Action.click(getDriver(), viewCartCheckOutbutton);
+	}
 	public  void shippingMethod() {
 		Action.isSelected(getDriver(), FreeShipping);
 	}
 	public void PaymentMethod() {
+		Action.fluentWait(getDriver(), CashOnDilivery, 30);
 		Action.isSelected(getDriver(), CashOnDilivery);
 		
 		//Action.isSelected(getDriver(), PaypalStandred );
