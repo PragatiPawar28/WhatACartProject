@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testes.CompliteOrderPageTest">
+      <class name="com.Testes.IndexPageTest">
         <methods>
+          <include name="verifyLogo"/>
+          <include name="verifyTitle"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="endToEndTest" invocation-numbers="0"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
         </methods>
-      </class> <!-- com.Testes.CompliteOrderPageTest -->
+      </class> <!-- com.Testes.IndexPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
