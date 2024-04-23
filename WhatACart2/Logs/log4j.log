@@ -295,3 +295,7 @@
 2024-04-23 16:59:10 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
 2024-04-23 16:59:10 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
 2024-04-23 16:59:10 DEBUG cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Admin/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
+2024-04-23 17:18:24 INFO  Log:10 - =====================================verifyLoginTest TEST START=========================================
+2024-04-23 17:18:25 INFO  Log:21 - Enter sucsessfully valid credentials
+2024-04-23 17:18:26 INFO  Log:21 - Login sucsessfully with valid credentials
+2024-04-23 17:18:26 INFO  Log:14 - =====================================verifyLoginTest TEST END=========================================
