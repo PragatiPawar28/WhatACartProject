@@ -3,6 +3,7 @@ package Com.jbk.base;
 import java.util.concurrent.TimeUnit;
 
 
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +16,6 @@ import org.testng.annotations.Parameters;
 
 import Com.jbk.utilities.ExtentManager;
 import Com.jbk.utilities.propertyUtils;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 

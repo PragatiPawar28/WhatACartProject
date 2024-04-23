@@ -58,5 +58,9 @@ public class LoginPage extends BaseClass {
 		Action.click(getDriver(), createNewAccountBtn);
 		return new AccountCreationPage();
 	}
+	public String getCurrURL() throws Throwable {
+		String LoginPagePageURL=getDriver().getCurrentUrl();
+		return LoginPagePageURL;
+	}
 	
 }

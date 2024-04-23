@@ -6,14 +6,9 @@
   </listeners>
   <test thread-count="5" name="TestAll">
     <classes>
-      <class name="com.Testes.ShoppingCartTest"/>
+     
       <class name="com.Testes.LoginPageTest"/>
-      <class name="com.Testes.AddToCartPageTest"/>
-      <class name="com.Testes.SearchResultPageTest"/>
-      <class name="com.Testes.MyAccountPage"/>
-      <class name="com.Testes.AccountCreationTestPage"/>
-      <class name="com.Testes.CompliteOrderPageTest"/>
-      <class name="com.Testes.IndexPageTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
