@@ -32,23 +32,23 @@ public class HomePage extends BaseClass {
 	WebElement mydownLoad;
 	
 	public HomePage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public boolean validiateWishList() {
-		return Action.isDisplayed(getDriver(), wishList);
+		return Action.isDisplayed(driver, wishList);
 	}
 	
 	public boolean validiateOrderHistory() {
-		return Action.isDisplayed(getDriver(), myOrder);
+		return Action.isDisplayed(driver, myOrder);
 	}
 	
 	public boolean validiateEditProfile() {
-		return Action.isDisplayed(getDriver(), editProfile);
+		return Action.isDisplayed(driver, editProfile);
 	}
 	
 	public String getCurrURL() throws Throwable {
-		String homePageURL=getDriver().getCurrentUrl();
+		String homePageURL=driver.getCurrentUrl();
 		return homePageURL;
 	}
 }

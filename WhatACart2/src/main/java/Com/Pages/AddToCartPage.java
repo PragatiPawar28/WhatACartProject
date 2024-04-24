@@ -33,29 +33,29 @@ public class AddToCartPage extends BaseClass {
 	WebElement viewCart;
 	
 	public AddToCartPage () {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public void enterQuantity(String quantity1) throws Throwable  {
-				Action.JSClick(getDriver(), product);
-				Action.fluentWait(getDriver(), viewCart, 5);
+				Action.JSClick(driver, product);
+				Action.fluentWait(driver, viewCart, 5);
 				quantity.click();
 				quantity.clear();
 		        Action.type(quantity, quantity1);
 	}
 	
 	public void clickOnAddToCart()  {
-		Action.click(getDriver(), addToCartBtn);
+		Action.click(driver, addToCartBtn);
 	}
 	public boolean validiateAddToCart() {
-		return Action.isDisplayed(getDriver(), Description);
+		return Action.isDisplayed(driver, Description);
 	}
 	
 	
 	public ShoppingCart clickOnVieCart() throws Exception {
-		Action.fluentWait(getDriver(), viewCart, 10);
-		Action.click(getDriver(), addTocartdropdown);
-		Action.click(getDriver(), viewCart);
+		Action.fluentWait(driver, viewCart, 10);
+		Action.click(driver, addTocartdropdown);
+		Action.click(driver, viewCart);
 		return new ShoppingCart();
 	}
 }

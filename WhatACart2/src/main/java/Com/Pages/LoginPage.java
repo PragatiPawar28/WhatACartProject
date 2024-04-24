@@ -31,15 +31,15 @@ public class LoginPage extends BaseClass {
 	WebElement createNewAccountBtn;
 	
 	public LoginPage () {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 		
 	}
 
 	public HomePage login (String uname ,String passwd) {
 		Action.type(username, uname);
 		Action.type(password, passwd);
-		Action.click(getDriver(), rememberMecheackBox);
-		Action.click(getDriver(), signInBtn);
+		Action.click(driver, rememberMecheackBox);
+		Action.click(driver, signInBtn);
 		
 		return new HomePage();
 	}
@@ -47,19 +47,19 @@ public class LoginPage extends BaseClass {
 	public CheackOutPage login1 (String uname ,String passwd) {
 		Action.type(username, uname);
 		Action.type(password, passwd);
-		Action.click(getDriver(), rememberMecheackBox);
-		Action.click(getDriver(), signInBtn);
+		Action.click(driver, rememberMecheackBox);
+		Action.click(driver, signInBtn);
 		
 		return new CheackOutPage();
 	}
 	
 	public AccountCreationPage createNewAccount() throws Throwable {
 		
-		Action.click(getDriver(), createNewAccountBtn);
+		Action.click(driver, createNewAccountBtn);
 		return new AccountCreationPage();
 	}
 	public String getCurrURL() throws Throwable {
-		String LoginPagePageURL=getDriver().getCurrentUrl();
+		String LoginPagePageURL=driver.getCurrentUrl();
 		return LoginPagePageURL;
 	}
 	

@@ -23,19 +23,19 @@ public class OrderconfirmationPage extends BaseClass {
 	WebElement EditcardBtn;
 	
 	public OrderconfirmationPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public ShoppingCart editorder() {
-		Action.click(getDriver(), EditcardBtn);
+		Action.click(driver, EditcardBtn);
 		return new ShoppingCart();
 	}
 	public CheackOutPage cancelOrder() {
-		Action.click(getDriver(), BackBtn);
+		Action.click(driver, BackBtn);
 		return new CheackOutPage();
 	}
 	public CompliteOrderPage orderconformation() {
-		Action.click(getDriver(), confirmOrderBtn);
+		Action.click(driver, confirmOrderBtn);
 		return new CompliteOrderPage();
 	}
 }

@@ -36,29 +36,29 @@ public class CheackOutPage extends BaseClass {
 	
 	
 	public CheackOutPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public void  viewCartCheckout () {
-		Action.click(getDriver(), addTocartdropdown);
-		Action.fluentWait(getDriver(), viewCartCheckOutbutton, 10);
+		Action.click(driver, addTocartdropdown);
+		Action.fluentWait(driver, viewCartCheckOutbutton, 10);
 
-		Action.click(getDriver(), viewCartCheckOutbutton);
+		Action.click(driver, viewCartCheckOutbutton);
 	}
 	public  void shippingMethod() {
-		Action.isSelected(getDriver(), FreeShipping);
+		Action.isSelected(driver, FreeShipping);
 	}
 	public void PaymentMethod() {
-		Action.fluentWait(getDriver(), CashOnDilivery, 30);
-		Action.isSelected(getDriver(), CashOnDilivery);
+		Action.fluentWait(driver, CashOnDilivery, 30);
+		Action.isSelected(driver, CashOnDilivery);
 		
-		//Action.isSelected(getDriver(), PaypalStandred );
+		//Action.isSelected(driver, PaypalStandred );
 		
-		Action.click(getDriver(), TearmsAndCond);
+		Action.click(driver, TearmsAndCond);
 
 	}
 	public OrderconfirmationPage continue_page() {
-		Action.click(getDriver(), Continue1);
+		Action.click(driver, Continue1);
 		return new OrderconfirmationPage();
 				}
 	

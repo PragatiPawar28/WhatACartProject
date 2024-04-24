@@ -28,7 +28,7 @@ public class CompliteOrderPage extends BaseClass {
 	
 	
 	public CompliteOrderPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public String ValidateConfirmMsg() {
@@ -37,13 +37,13 @@ public class CompliteOrderPage extends BaseClass {
 	}
 	
 	public MyOrder clickOnMyOedr() {
-		Action.click(getDriver(), MyOrder);
+		Action.click(driver, MyOrder);
 		
 		return new MyOrder();
 	}
 	
 	public HomePage continueToHomePage() {
-		Action.click(getDriver(), ContinueBtn);
+		Action.click(driver, ContinueBtn);
 		
 		return new HomePage();
 	}

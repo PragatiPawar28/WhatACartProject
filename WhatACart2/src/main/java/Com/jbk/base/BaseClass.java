@@ -19,10 +19,10 @@ import Com.jbk.utilities.propertyUtils;
 
 public class BaseClass {
 
-	//public static WebDriver driver =null;
+	public static WebDriver driver =null;
 	
 	// Declare ThreadLocal Driver
-		public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+	//	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
 		
 		@BeforeSuite(groups = {"Smoke","Sanity","Regression"})
@@ -31,10 +31,10 @@ public class BaseClass {
 			ExtentManager.setExtent();
 
 		}
-		public static WebDriver getDriver() {
-			// Get Driver from threadLocalmap
-					return driver.get();
-				}
+//		public static WebDriver getDriver() {
+//			// Get Driver from threadLocalmap
+//					return driver.get();
+//				}
 		
 	@Parameters("browser")
 	public void initialization () throws Exception {
@@ -45,24 +45,24 @@ public class BaseClass {
 		{
 			//WebDriverManager.chromedriver().setup();
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			//driver= new ChromeDriver();
+			driver= new ChromeDriver();
 			// Set Browser to ThreadLocalMap
-						driver.set(new ChromeDriver());
+					//	driver.set(new ChromeDriver());
 		}
 		if (browserName.equalsIgnoreCase("Firefox")) 
 		{
 			//WebDriverManager.firefoxdriver().setup();
 			System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-			//driver= new FirefoxDriver();
-			driver.set(new FirefoxDriver());
+			driver= new FirefoxDriver();
+			//driver.set(new FirefoxDriver());
 
 		}
 		
-		//driver.manage().window().maximize()
+		driver.manage().window().maximize();
 		//Maximize the screen
-				getDriver().manage().window().maximize();
+			//	getDriver().manage().window().maximize();
 		
-				getDriver().get(propertyUtils.readproperty("url"));
+				driver.get(propertyUtils.readproperty("url"));
 		
 					}
 	

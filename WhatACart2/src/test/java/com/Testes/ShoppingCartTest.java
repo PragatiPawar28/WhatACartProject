@@ -46,6 +46,6 @@ public class ShoppingCartTest extends BaseClass {
 	
 	@AfterMethod(groups = {"Smoke","Sanity","Regression"})
 	public void tearDown() {
-		getDriver().quit();
+		driver.quit();
 	}
 }

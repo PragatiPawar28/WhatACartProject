@@ -97,20 +97,20 @@ public class AccountCreationPage extends BaseClass{
 		}
 	
 	public void clickOnPerson() {
-	 Action.click(getDriver(), Person);
+	 Action.click(driver, Person);
 
 	}
 	public void clickOnAddress() {
-		Action.click(getDriver(), adress);
+		Action.click(driver, adress);
 	
 	}
 	 
 	public LoginPage validRegistration() {
-		Action.click(getDriver(), Continuebtn);
+		Action.click(driver, Continuebtn);
 		return new LoginPage();
 	}
 		
 	public boolean validateAcountCreatePage() throws Throwable {
-		 return Action.isDisplayed(getDriver(), formTitle);
+		 return Action.isDisplayed(driver, formTitle);
 	}
 }

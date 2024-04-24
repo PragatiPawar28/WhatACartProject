@@ -31,30 +31,30 @@ public class IndexPage extends BaseClass {
 	
 	 public IndexPage () {
 		
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public LoginPage clickOnSignIn() {
-		Action.click(getDriver(), myaccount);
-		Action.click(getDriver(), signInBtn);
+		Action.click(driver, myaccount);
+		Action.click(driver, signInBtn);
 		
 		return new LoginPage();
 	}
 	
 	public boolean validateLogo() {
-	return	Action.isDisplayed(getDriver(), whatACartLogo);
+	return	Action.isDisplayed(driver, whatACartLogo);
 	}
 	
 	
 	public String getwhatCartTitle() {
-		String whatACartTitle = getDriver().getTitle();
+		String whatACartTitle = driver.getTitle();
 	return whatACartTitle;
 	}
 	
 		
 	public SearchResultPage searchProduct(String productName) {
 		Action.type(searchProductBox, productName);
-		Action.click(getDriver(), serchButton);
+		Action.click(driver, serchButton);
 		
 		return new SearchResultPage();
 	}

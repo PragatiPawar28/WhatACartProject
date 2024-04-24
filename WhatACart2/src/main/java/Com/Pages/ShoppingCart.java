@@ -26,11 +26,11 @@ public class ShoppingCart extends BaseClass{
 	WebElement  ContinueShopping;
 	
 	public ShoppingCart() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public double getUnitPrice() {
-		Action.fluentWait(getDriver(), CheckOut, 20);
+		Action.fluentWait(driver, CheckOut, 20);
 		String unitPrice1=unitPrice.getText();
 		String unit=unitPrice1.replaceAll("[^a-zA-Z0-9]","");
 		double finalUnitPrice=Double.parseDouble(unit);
@@ -45,7 +45,7 @@ public class ShoppingCart extends BaseClass{
 	}
 	
 	public LoginPage clickOnCheckOut() throws Throwable {
-		Action.click(getDriver(), CheckOut);
+		Action.click(driver, CheckOut);
 		return new LoginPage();
 	}
 }
